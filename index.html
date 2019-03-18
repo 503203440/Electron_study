@@ -10,3 +10,38 @@
     第一个Electron程序
 </body>
 </html>
+<script>
+
+    var letter = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+
+
+    // while(confirm(random1)){
+    //     random1=Math.floor(Math.random()*16)
+    // }
+
+    function changeBG(){
+        
+        var random1=Math.floor(Math.random()*16);
+        var random2=Math.floor(Math.random()*16);
+        var random3=Math.floor(Math.random()*16);
+        var random4=Math.floor(Math.random()*16);
+        var random5=Math.floor(Math.random()*16);
+        var random6=Math.floor(Math.random()*16);
+        
+        document.body.style.backgroundColor="#"+letter[random1]+letter[random2]+letter[random3]+letter[random4]+letter[random5]+letter[random6];
+
+        // alert("#"+letter[random1]+letter[random2]+letter[random3]+letter[random4]+letter[random5]+letter[random6]);
+    }
+
+    window.onload=function(){
+        // changeBG();
+
+        while(true){
+            setTimeout(changeBG(),2000);
+        }
+
+    }
+
+
+</script>
+
