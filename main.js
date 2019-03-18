@@ -15,15 +15,18 @@ const createWindow = () => {
 
     //构建一个新窗口
     win = new BrowserWindow({
-        width:1280,
-        height:800
+        width:980,
+        height:600
     });
     win.setMenu(null);
     //定义常量URL并给定路径，协议，是否有双斜线
     const URL =url.format({
 
-        pathname:path.join('www.baidu.com'),
-        protocol:'http:',
+        // 这里可以指定一个网址，使用http协议前缀，也可以是本地的文件地址，使用file协议前缀
+        // pathname:path.join('www.baidu.com'),
+        // protocol:'http:',
+        pathname:path.join('index.html'),
+        protocol:'file',
         slashes:true
 
     });
