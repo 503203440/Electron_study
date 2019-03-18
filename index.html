@@ -7,7 +7,9 @@
     <title>ONE</title>
 </head>
 <body>
-    第一个Electron程序
+    <div style="margin: 50px auto;width: 200px;height: 200px;border-radius: 50%;background-image: url('./我佛慈悲.jpg');background-size: 100% 100%;">
+
+    </div>
 </body>
 </html>
 <script>
@@ -21,6 +23,7 @@
 
     function changeBG(){
         
+        // 产生0-15的随机数
         var random1=Math.floor(Math.random()*16);
         var random2=Math.floor(Math.random()*16);
         var random3=Math.floor(Math.random()*16);
@@ -28,17 +31,24 @@
         var random5=Math.floor(Math.random()*16);
         var random6=Math.floor(Math.random()*16);
         
+        //给body设置颜色
         document.body.style.backgroundColor="#"+letter[random1]+letter[random2]+letter[random3]+letter[random4]+letter[random5]+letter[random6];
 
         // alert("#"+letter[random1]+letter[random2]+letter[random3]+letter[random4]+letter[random5]+letter[random6]);
     }
 
+    //页面加载
     window.onload=function(){
         // changeBG();
+        //定时执行换色程序
+        setInterval(() => {
+            changeBG()
+        }, 100);
 
-        while(true){
-            setTimeout(changeBG(),2000);
-        }
+        // while(true){
+        //     setTimeout(changeBG(),2000);
+        //     break;
+        // }
 
     }
 
