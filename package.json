@@ -1,0 +1,23 @@
+{
+  "name": "Electron_ONE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron .",
+    "package":"electron-packager . YX --all --out ./OutApp --version 1.4.13 --overwrite --icon=./ico.ico"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.8.2"
+  },
+  "electronPackagerConfig": {
+    "asar": true
+  },
+  "devDependencies": {
+    "electron-packager": "^11.0.0"
+  }
+}
